@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadTrack — система читання книг</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>ReadTrack</h1>
+  <button class="burger" aria-label="Відкрити меню">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav">
+    <ul>
+      <li><a href="#">Головна</a></li>
+      <li><a href="#books">Книги</a></li>
+      <li><a href="#stats">Статистика</a></li>
+      <li><a href="#register">Реєстрація</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Онлайн читання та контроль прогресу</h2>
+    <p>
+      ReadTrack — це веб-система, яка дозволяє читати книги онлайн,
+      відстежувати власний прогрес та аналізувати читацькі досягнення.
+    </p>
+    <img src="reading.jpg" alt="Користувач читає електронну книгу">
+  </section>
+
+  <section id="books">
+    <h2>Популярні книги для читання</h2>
+    <div class="cards-grid">
+      <article class="card">
+        <h3>Atomic Habits</h3>
+        <img src="book1.jpg" alt="Обкладинка книги Atomic Habits">
+        <p>Книга про формування корисних звичок і підвищення ефективності.</p>
+        <button class="button">Читати</button>
+      </article>
+      <article class="card">
+        <h3>Deep Work</h3>
+        <img src="book2.jpg" alt="Обкладинка книги Deep Work">
+        <p>Практичний посібник про концентрацію та глибоку роботу.</p>
+        <button class="button">Читати</button>
+      </article>
+      <article class="card">
+        <h3>Rich Dad Poor Dad</h3>
+        <img src="book3.jpg" alt="Обкладинка книги Rich Dad Poor Dad">
+        <p>Книга про фінансову грамотність та мислення успішних людей.</p>
+        <button class="button">Читати</button>
+      </article>
+      <article class="card">
+        <h3>The 7 Habits</h3>
+        <img src="book4.jpg" alt="Обкладинка книги The 7 Habits">
+        <p>Сім звичок надзвичайно ефективних людей.</p>
+        <button class="button">Читати</button>
+      </article>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2>Аналіз читацьких досягнень</h2>
+    <p>Система дозволяє відстежувати:</p>
+    <ul>
+      <li>кількість прочитаних книг</li>
+      <li>кількість прочитаних сторінок</li>
+      <li>час читання</li>
+      <li>прогрес по кожній книзі</li>
+    </ul>
+  </section>
+
+  <aside class="sidebar">
+    <h2>Порада читачу</h2>
+    <p>Читайте хоча б 20 хвилин щодня — це значно покращує концентрацію та пам'ять.</p>
+  </aside>
+
+  <section id="register">
+    <h2>Реєстрація користувача</h2>
+    <form class="form">
+      <div class="form-group">
+        <label for="name">Ім'я</label>
+        <input id="name" type="text" name="name" placeholder="Ваше ім'я" required minlength="2" maxlength="30">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="example@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input id="password" type="password" name="password" placeholder="Мінімум 6 символів" required minlength="6">
+      </div>
+      <button type="submit" class="button">Зареєструватися</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Зворотний зв'язок</h2>
+    <form class="form">
+      <div class="form-group">
+        <label for="phone">Телефон</label>
+        <input id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="^\+380[0-9]{9}$">
+      </div>
+      <div class="form-group">
+        <label for="message">Повідомлення</label>
+        <textarea id="message" name="message" placeholder="Ваше повідомлення" required minlength="10" maxlength="300"></textarea>
+      </div>
+      <button type="submit" class="button">Надіслати</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2026 ReadTrack — система читання книг онлайн</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
