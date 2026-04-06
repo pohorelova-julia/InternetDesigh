@@ -5,7 +5,7 @@ burger.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
 
-// Close menu when a link is clicked (optional, improves UX)
+// Закривати меню після натискання посилання
 const navLinks = document.querySelectorAll('.nav a');
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
@@ -13,7 +13,7 @@ navLinks.forEach(link => {
   });
 });
 
-// Optional: close menu if clicking outside (improves UX)
+// закривати меню, якщо клацнути за межами
 document.addEventListener('click', (e) => {
   if (!nav.contains(e.target) && !burger.contains(e.target) && nav.classList.contains('open')) {
     nav.classList.remove('open');
