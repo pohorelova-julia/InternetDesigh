@@ -21,6 +21,7 @@
       <li><a href="#register">Реєстрація</a></li>
       <li><a href="#contact">Контакти</a></li>
     </ul>
+    <button class="close-menu" aria-label="Закрити меню">✕</button>
   </nav>
 </header>
 
@@ -36,27 +37,45 @@
 
   <section id="books">
     <h2>Популярні книги для читання</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Всі</button>
+      <button class="filter-btn" data-filter="habits">Звички</button>
+      <button class="filter-btn" data-filter="finance">Фінанси</button>
+      <button class="filter-btn" data-filter="productivity">Продуктивність</button>
+    </div>
     <div class="cards-grid">
-      <article class="card">
-        <h3>Atomic Habits</h3>
+      <article class="card" data-category="habits">
+        <div class="card-header">
+          <h3>Atomic Habits</h3>
+          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
+        </div>
         <img src="book1.jpg" alt="Обкладинка книги Atomic Habits">
         <p>Книга про формування корисних звичок і підвищення ефективності.</p>
         <button class="button">Читати</button>
       </article>
-      <article class="card">
-        <h3>Deep Work</h3>
+      <article class="card" data-category="productivity">
+        <div class="card-header">
+          <h3>Deep Work</h3>
+          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
+        </div>
         <img src="book2.jpg" alt="Обкладинка книги Deep Work">
         <p>Практичний посібник про концентрацію та глибоку роботу.</p>
         <button class="button">Читати</button>
       </article>
-      <article class="card">
-        <h3>Rich Dad Poor Dad</h3>
+      <article class="card" data-category="finance">
+        <div class="card-header">
+          <h3>Rich Dad Poor Dad</h3>
+          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
+        </div>
         <img src="book3.jpg" alt="Обкладинка книги Rich Dad Poor Dad">
         <p>Книга про фінансову грамотність та мислення успішних людей.</p>
         <button class="button">Читати</button>
       </article>
-      <article class="card">
-        <h3>The 7 Habits</h3>
+      <article class="card" data-category="habits">
+        <div class="card-header">
+          <h3>The 7 Habits</h3>
+          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
+        </div>
         <img src="book4.jpg" alt="Обкладинка книги The 7 Habits">
         <p>Сім звичок надзвичайно ефективних людей.</p>
         <button class="button">Читати</button>
@@ -82,7 +101,7 @@
 
   <section id="register">
     <h2>Реєстрація користувача</h2>
-    <form class="form">
+    <form class="form" id="register-form">
       <div class="form-group">
         <label for="name">Ім'я</label>
         <input id="name" type="text" name="name" placeholder="Ваше ім'я" required minlength="2" maxlength="30">
@@ -95,13 +114,13 @@
         <label for="password">Пароль</label>
         <input id="password" type="password" name="password" placeholder="Мінімум 6 символів" required minlength="6">
       </div>
-      <button type="submit" class="button">Зареєструватися</button>
+      <button type="submit" class="button" id="submit-btn">Зареєструватися</button>
     </form>
   </section>
 
   <section id="contact">
     <h2>Зворотний зв'язок</h2>
-    <form class="form">
+    <form class="form" id="contact-form">
       <div class="form-group">
         <label for="phone">Телефон</label>
         <input id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="^\+380[0-9]{9}$">
