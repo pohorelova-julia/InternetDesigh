@@ -43,44 +43,12 @@
       <button class="filter-btn" data-filter="finance">Фінанси</button>
       <button class="filter-btn" data-filter="productivity">Продуктивність</button>
     </div>
-    <div class="cards-grid">
-      <article class="card" data-category="habits">
-        <div class="card-header">
-          <h3>Atomic Habits</h3>
-          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
-        </div>
-        <img src="book1.jpg" alt="Обкладинка книги Atomic Habits">
-        <p>Книга про формування корисних звичок і підвищення ефективності.</p>
-        <button class="button">Читати</button>
-      </article>
-      <article class="card" data-category="productivity">
-        <div class="card-header">
-          <h3>Deep Work</h3>
-          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
-        </div>
-        <img src="book2.jpg" alt="Обкладинка книги Deep Work">
-        <p>Практичний посібник про концентрацію та глибоку роботу.</p>
-        <button class="button">Читати</button>
-      </article>
-      <article class="card" data-category="finance">
-        <div class="card-header">
-          <h3>Rich Dad Poor Dad</h3>
-          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
-        </div>
-        <img src="book3.jpg" alt="Обкладинка книги Rich Dad Poor Dad">
-        <p>Книга про фінансову грамотність та мислення успішних людей.</p>
-        <button class="button">Читати</button>
-      </article>
-      <article class="card" data-category="habits">
-        <div class="card-header">
-          <h3>The 7 Habits</h3>
-          <button class="favorite-btn" aria-label="Додати в улюблене">❤</button>
-        </div>
-        <img src="book4.jpg" alt="Обкладинка книги The 7 Habits">
-        <p>Сім звичок надзвичайно ефективних людей.</p>
-        <button class="button">Читати</button>
-      </article>
-    </div>
+
+    <!-- Динамічний контейнер для карток -->
+    <div id="books-grid" class="cards-grid"></div>
+
+    <!-- Індикатор завантаження (спочатку прихований) -->
+    <div id="loader" class="loader" style="display: none;">Завантаження даних...</div>
   </section>
 
   <section id="stats">

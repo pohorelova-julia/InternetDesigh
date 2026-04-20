@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Atomic Habits",
+    "author": "Джеймс Клір",
+    "category": "habits",
+    "image": "book1.jpg",
+    "description": "Книга про формування корисних звичок і підвищення ефективності.",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "title": "Deep Work",
+    "author": "Кел Ньюпорт",
+    "category": "productivity",
+    "image": "book2.jpg",
+    "description": "Практичний посібник про концентрацію та глибоку роботу.",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "title": "Rich Dad Poor Dad",
+    "author": "Роберт Кійосакі",
+    "category": "finance",
+    "image": "book3.jpg",
+    "description": "Книга про фінансову грамотність та мислення успішних людей.",
+    "inStock": false
+  },
+  {
+    "id": 4,
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Стівен Кові",
+    "category": "habits",
+    "image": "book4.jpg",
+    "description": "Сім звичок надзвичайно ефективних людей.",
+    "inStock": true
+  }
+]

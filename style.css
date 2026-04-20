@@ -413,3 +413,20 @@ textarea:invalid:not(:placeholder-shown) {
 .card.hidden {
   display: none;
 }
+
+/* LOADER & ERROR MESSAGE */
+.loader {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.error-message {
+  text-align: center;
+  padding: 20px;
+  color: var(--color-error);
+  background: #fee;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-error);
+}
