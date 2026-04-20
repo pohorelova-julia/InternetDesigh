@@ -21,15 +21,13 @@ navLinks.forEach(link => {
   link.addEventListener('click', closeMenu);
 });
 
-// 2. Динамічне завантаження книг з data.json
+// 2. Завантаження книг з data.json
 const booksGrid = document.getElementById('books-grid');
 const loader = document.getElementById('loader');
 
-// Функція для відображення карток
 function renderCards(books) {
   if (!booksGrid) return;
 
-  // Очищаємо контейнер
   booksGrid.innerHTML = '';
 
   books.forEach(book => {
@@ -49,13 +47,10 @@ function renderCards(books) {
     booksGrid.insertAdjacentHTML('beforeend', cardHTML);
   });
 
-  // Переініціалізуємо обробники для улюблених кнопок
   initFavoriteButtons();
-  // Застосовуємо поточний фільтр (активна кнопка)
   applyCurrentFilter();
 }
 
-// Ініціалізація кнопок "Улюблене"
 function initFavoriteButtons() {
   const favBtns = document.querySelectorAll('.favorite-btn');
   favBtns.forEach(btn => {
@@ -69,7 +64,6 @@ function handleFavoriteClick(e) {
   this.classList.toggle('active');
 }
 
-// Фільтрація: отримуємо активний фільтр і застосовуємо
 function applyCurrentFilter() {
   const activeFilterBtn = document.querySelector('.filter-btn.active');
   if (activeFilterBtn) {
@@ -90,7 +84,6 @@ function filterCards(filterValue) {
   });
 }
 
-// Фільтрація: обробники для кнопок
 const filterBtns = document.querySelectorAll('.filter-btn');
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -101,10 +94,8 @@ filterBtns.forEach(btn => {
   });
 });
 
-// Асинхронне завантаження даних
 async function loadBooks() {
   try {
-    // Показуємо лоадер
     if (loader) loader.style.display = 'block';
 
     const response = await fetch('data.json');
@@ -119,12 +110,11 @@ async function loadBooks() {
       booksGrid.innerHTML = `<div class="error-message">Вибачте, дані тимчасово недоступні. Спробуйте оновити сторінку.</div>`;
     }
   } finally {
-    // Ховаємо лоадер
     if (loader) loader.style.display = 'none';
   }
 }
 
-// 3. Анімована кнопка зі станом завантаження (реєстрація)
+// 3. Анімована кнопка зі станом завантаження 
 const registerForm = document.getElementById('register-form');
 const submitBtn = document.getElementById('submit-btn');
 
@@ -150,5 +140,4 @@ if (registerForm && submitBtn) {
   });
 }
 
-// Запускаємо завантаження книг після завантаження DOM
 document.addEventListener('DOMContentLoaded', loadBooks);
