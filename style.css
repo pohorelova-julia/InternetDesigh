@@ -137,7 +137,7 @@ body.no-scroll {
   justify-content: center;
 }
 
-/* Десктопна версія, меню стає звичайним горизонтальним */
+/* Desktop normal menu */
 @media (min-width: 768px) {
   .nav {
     position: static;
@@ -165,7 +165,7 @@ body.no-scroll {
   }
 }
 
-/* Мобільна версія, бургер */
+/* Mobile burger visible */
 @media (max-width: 767px) {
   .burger {
     display: flex;
@@ -232,7 +232,7 @@ main {
   margin: var(--spacing-lg) 0;
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -292,6 +292,8 @@ main {
 
 .card img {
   width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
   border-radius: var(--radius);
   margin-bottom: var(--spacing-sm);
 }
@@ -324,7 +326,7 @@ main {
   transform: none;
 }
 
-/* Стиль для спінера в кнопці */
+/* Spinner in button */
 .button .spinner {
   display: inline-block;
   width: 16px;
@@ -389,9 +391,9 @@ textarea:focus {
   outline: 2px solid var(--color-primary);
 }
 
-/* HTML5 validation styling */
-input:valid,
-textarea:valid {
+/* HTML5 validation and error messages */
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
   border-color: var(--color-success);
 }
 
@@ -400,13 +402,16 @@ textarea:invalid:not(:placeholder-shown) {
   border-color: var(--color-error);
 }
 
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: var(--spacing-md);
-  background: var(--color-card);
-  border-top: 1px solid var(--color-border);
-  margin-top: var(--spacing-xl);
+.error-message {
+  display: none;
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+input:invalid:not(:placeholder-shown) ~ .error-message,
+textarea:invalid:not(:placeholder-shown) ~ .error-message {
+  display: block;
 }
 
 /* FILTER HIDDEN CLASS */
@@ -422,11 +427,20 @@ textarea:invalid:not(:placeholder-shown) {
   color: var(--color-primary);
 }
 
-.error-message {
+.error-message-global {
   text-align: center;
   padding: 20px;
   color: var(--color-error);
   background: #fee;
   border-radius: var(--radius);
   border: 1px solid var(--color-error);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  background: var(--color-card);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--spacing-xl);
 }

@@ -4,7 +4,7 @@
     "title": "Atomic Habits",
     "author": "Джеймс Клір",
     "category": "habits",
-    "image": "book1.jpg",
+    "image": "image/HA.jpg",
     "description": "Книга про формування корисних звичок і підвищення ефективності.",
     "inStock": true
   },
@@ -13,7 +13,7 @@
     "title": "Deep Work",
     "author": "Кел Ньюпорт",
     "category": "productivity",
-    "image": "book2.jpg",
+    "image": "image/knyga_deep_work.jpg",
     "description": "Практичний посібник про концентрацію та глибоку роботу.",
     "inStock": true
   },
@@ -22,17 +22,35 @@
     "title": "Rich Dad Poor Dad",
     "author": "Роберт Кійосакі",
     "category": "finance",
-    "image": "book3.jpg",
+    "image": "image/rich-dad-poor-dad-34.jpg",
     "description": "Книга про фінансову грамотність та мислення успішних людей.",
     "inStock": false
   },
   {
     "id": 4,
-    "title": "The 7 Habits of Highly Effective People",
+    "title": "The 7 Habits",
     "author": "Стівен Кові",
     "category": "habits",
-    "image": "book4.jpg",
+    "image": "image/the-7-habits.jpg",
     "description": "Сім звичок надзвичайно ефективних людей.",
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "title": "Think and Grow Rich",
+    "author": "Наполеон Хілл",
+    "category": "finance",
+    "image": "image/Rich-grow.jpg",
+    "description": "Секрети фінансового успіху від відомих особистостей.",
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "title": "Есенціалізм",
+    "author": "Грег Маккеон",
+    "category": "productivity",
+    "image": "image/Есенціалізм.jpg",
+    "description": "Мистецтво визначати пріоритети та робити менше, але краще.",
     "inStock": true
   }
 ]

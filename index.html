@@ -32,7 +32,7 @@
       ReadTrack — це веб-система, яка дозволяє читати книги онлайн,
       відстежувати власний прогрес та аналізувати читацькі досягнення.
     </p>
-    <img src="reading.jpg" alt="Користувач читає електронну книгу">
+    <img src="image/man.jpg" alt="Користувач читає електронну книгу">
   </section>
 
   <section id="books">
@@ -47,7 +47,7 @@
     <!-- Динамічний контейнер для карток -->
     <div id="books-grid" class="cards-grid"></div>
 
-    <!-- Індикатор завантаження (спочатку прихований) -->
+    <!-- Індикатор завантаження -->
     <div id="loader" class="loader" style="display: none;">Завантаження даних...</div>
   </section>
 
@@ -69,18 +69,21 @@
 
   <section id="register">
     <h2>Реєстрація користувача</h2>
-    <form class="form" id="register-form">
+    <form class="form" id="register-form" novalidate>
       <div class="form-group">
         <label for="name">Ім'я</label>
         <input id="name" type="text" name="name" placeholder="Ваше ім'я" required minlength="2" maxlength="30">
+        <span class="error-message">Введіть ім'я (2–30 символів)</span>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
         <input id="email" type="email" name="email" placeholder="example@email.com" required>
+        <span class="error-message">Введіть коректний email</span>
       </div>
       <div class="form-group">
         <label for="password">Пароль</label>
         <input id="password" type="password" name="password" placeholder="Мінімум 6 символів" required minlength="6">
+        <span class="error-message">Пароль має містити щонайменше 6 символів</span>
       </div>
       <button type="submit" class="button" id="submit-btn">Зареєструватися</button>
     </form>
@@ -88,14 +91,16 @@
 
   <section id="contact">
     <h2>Зворотний зв'язок</h2>
-    <form class="form" id="contact-form">
+    <form class="form" id="contact-form" novalidate>
       <div class="form-group">
         <label for="phone">Телефон</label>
         <input id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="^\+380[0-9]{9}$">
+        <span class="error-message">Формат: +380XXXXXXXXX</span>
       </div>
       <div class="form-group">
         <label for="message">Повідомлення</label>
         <textarea id="message" name="message" placeholder="Ваше повідомлення" required minlength="10" maxlength="300"></textarea>
+        <span class="error-message">Повідомлення має містити 10–300 символів</span>
       </div>
       <button type="submit" class="button">Надіслати</button>
     </form>

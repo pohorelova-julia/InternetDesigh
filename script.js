@@ -84,6 +84,7 @@ function filterCards(filterValue) {
   });
 }
 
+// Фільтри (активні кнопки)
 const filterBtns = document.querySelectorAll('.filter-btn');
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -94,6 +95,7 @@ filterBtns.forEach(btn => {
   });
 });
 
+// Асинхронне завантаження
 async function loadBooks() {
   try {
     if (loader) loader.style.display = 'block';
@@ -107,14 +109,14 @@ async function loadBooks() {
   } catch (error) {
     console.error('Помилка:', error);
     if (booksGrid) {
-      booksGrid.innerHTML = `<div class="error-message">Вибачте, дані тимчасово недоступні. Спробуйте оновити сторінку.</div>`;
+      booksGrid.innerHTML = `<div class="error-message-global">Вибачте, дані тимчасово недоступні. Спробуйте оновити сторінку.</div>`;
     }
   } finally {
     if (loader) loader.style.display = 'none';
   }
 }
 
-// 3. Анімована кнопка зі станом завантаження 
+// 3. Анімована кнопка реєстрації зі станом завантаження
 const registerForm = document.getElementById('register-form');
 const submitBtn = document.getElementById('submit-btn');
 
@@ -140,4 +142,5 @@ if (registerForm && submitBtn) {
   });
 }
 
+// Запуск після завантаження DOM
 document.addEventListener('DOMContentLoaded', loadBooks);
